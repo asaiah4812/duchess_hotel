@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div x-data="{
+        names: [
+        {id:1, name: 'asaiah'},
+        {id:2, name: 'john door'},
+        {id:3, name: 'james'},
+        {id:4, name: 'jacob'},
+        ]
+    }">
+    <template x-for="name in names" :key="name.id">
+        <li x-text="name.name"></li>
+    </template>
+    </div>
+</body>
+</html>

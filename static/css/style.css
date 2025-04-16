@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+html {
+  scroll-behavior: smooth;
+}
+
+[x-cloak]{
+    display: none;
+}
+
+/* Custom color for gold accents */
+.bg-gold-500 {
+  background-color: #C6A87D;
+}
+
+.bg-gold-600 {
+  background-color: #B39671;
+}
+
+.text-gold-500 {
+  color: #C6A87D;
+}
+
+.border-gold-500 {
+  border-color: #C6A87D;
+}
+
+.ring-gold-500 {
+  --tw-ring-color: #C6A87D;
+}
+
+.hover\:bg-gold-500:hover {
+  background-color: #C6A87D;
+}
+
+.hover\:bg-gold-600:hover {
+  background-color: #B39671;
+}
+
+.hover\:text-gold-500:hover {
+  color: #C6A87D;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.swiper-button-next,
+    .swiper-button-prev {
+      color: #D4AF37;
+      background: rgba(0, 0, 0, 0.5);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 18px;
+    }
+    .swiper-pagination-bullet {
+      background: #D4AF37;
+      opacity: 0.7;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+    @media (min-width: 1024px) {
+      .swiper-button-next {
+        right: 10px;
+      }
+      .swiper-button-prev {
+        left: 10px;
+      }
+    }
+
+    .rooms{
+        /* background-image: url("/static/images/rooms/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv.jpg"); */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/rooms/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv.jpg");
+    }
